@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Minh Duy, fsoft academy, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  D:\Programs\ARM_Keil\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\minhd\Desktop\Mock_mcp\Mock_MCP.uvprojx
+Project File Date:  10/28/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'D:\Programs\ARM_Keil\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+driver/8_Lpuart/Lpuart.c(66): warning: cast from 'unsigned char *' to 'unsigned int *' increases required alignment from 1 to 4 [-Wcast-align]
+                        unsigned int data = *(unsigned int *) pTxBuffer;                        
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+driver/8_Lpuart/Lpuart.c(104): warning: cast from 'unsigned char *' to 'unsigned int *' increases required alignment from 1 to 4 [-Wcast-align]
+                                *(unsigned int*)pRxBuffer = data;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling Lpuart.c...
+compiling Nvic.c...
+driver/7_Lpspi/Lpspi.c(1): warning: In file included from...
+driver/7_Lpspi/Lpspi.h(48): warning: padding size of 'Lpspi_InitType' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+driver/7_Lpspi/Lpspi.c(44): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                                                                        |(ConfigPtr->Init.spi_pcs<<LPSPI_TCR_PCS_SHIFT);
+                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+driver/7_Lpspi/Lpspi.c(79): warning: cast from 'unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+                        pLpspi->TDR = *((unsigned short*)pTxBuffer);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling Lpspi.c...
+compiling Port.c...
+driver/5_Systick/Systick.c(1): warning: In file included from...
+driver/5_Systick/Systick.h(6): warning: padding size of 'Systick_ConfigType' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling Systick.c...
+driver/1_GPIO/Gpio.c(1): warning: In file included from...
+driver/1_GPIO/Gpio.h(20): warning: padding size of 'Gpio_ConfigType' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling Gpio.c...
+main.c(1): warning: In file included from...
+./driver/7_Lpspi\Lpspi.h(48): warning: padding size of 'Lpspi_InitType' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(5): warning: In file included from...
+./driver/5_Systick\Systick.h(6): warning: padding size of 'Systick_ConfigType' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(4): warning: In file included from...
+./driver/1_GPIO\Gpio.h(20): warning: padding size of 'Gpio_ConfigType' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+3 warnings generated.
+compiling main.c...
+compiling Clock.c...
+compiling startup.c...
+compiling system_S32K144.c...
+assembling startup_S32K144.S...
+linking...
+Program Size: Code=4372 RO-data=612 RW-data=232 ZI-data=3348  
+".\Objects\Mock_MCP.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.S32_SDK_DFP.1.5.0.pack
+                Keil.S32_SDK_DFP.1.5.0
+                NXP S32 SDK S32K14x Device Support
+   * Component: Startup Version: 2.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/S32K144HAxxxLLx
+  ./RTE/_Target_1
+  D:/Programs/ARM_Keil/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/Programs/ARM_Keil/packs/Keil/S32_SDK_DFP/1.5.0/platform/devices
+  D:/Programs/ARM_Keil/packs/Keil/S32_SDK_DFP/1.5.0/platform/devices/common
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.0.0
+      Source file:   platform/devices/S32K144/startup/armc/startup_S32K144.S
+      Include file:  platform/devices/device_registers.h
+      Source file:   platform/devices/S32K144/startup/system_S32K144.c
+      Include file:  platform/devices/S32K144/startup/system_S32K144.h
+      Source file:   platform/devices/startup.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
